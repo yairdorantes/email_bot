@@ -75,7 +75,7 @@ def send_whatsapp_message(email_text: str):
     response = requests.post(url, json=data)
 
 
-schedule.every(10).seconds.do(check_emails)
+schedule.every(1).hour.do(check_emails)
 
 while True:
     schedule.run_pending()
